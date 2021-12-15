@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"os"
 	"strings"
 
 	"github.com/gin-gonic/gin"
@@ -116,8 +117,9 @@ func sjw(c *gin.Context) {
 }
 
 func main() {
+	port := os.Getenv("PORT")
 	r := gin.Default()
 	r.GET("/manga/:slug", crawll)
 	r.GET("/sjw", sjw)
-	r.Run()
+	r.Run(port)
 }
