@@ -117,9 +117,8 @@ func sjw(c *gin.Context) {
 }
 
 func main() {
-	port := 80
 	r := gin.Default()
 	r.GET("/manga/:slug", crawll)
 	r.GET("/sjw", sjw)
-	r.Run(port)
+	r.Run()
 }
