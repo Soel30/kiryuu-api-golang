@@ -1,1 +1,0 @@
-# kiryuu-api-golang
